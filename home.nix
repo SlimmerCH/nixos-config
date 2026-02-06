@@ -5,6 +5,7 @@
   imports = [
     ./hyprland.nix
     ./hyprlock.nix
+    ./kitty.nix
   ];
 
   home.username = "selim";
