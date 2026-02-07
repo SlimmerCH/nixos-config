@@ -43,7 +43,7 @@
       ];
 
       windowrule = [
-        
+        "float 1, match:class .*"        
 
         "float 1, match:class ^(io\\.missioncenter\\.MissionCenter)$"
         "size 1000 600, match:class ^(io\\.missioncenter\\.MissionCenter)$"
@@ -55,7 +55,8 @@
         "float 1, match:class ^(gjs)$"
         
         "tile 1, match:class ^(brave-browser)$"
-        "tile 1, match:class ^(Code)$"
+        "tile 1, match:class ^(code)$"
+        "tile 1, match:class ^(obsidian)$"
         
         "immediate 1, match:class ^(steam_app_.*)$"
         "fullscreen 1, match:class ^(steam_app_.*)$"
