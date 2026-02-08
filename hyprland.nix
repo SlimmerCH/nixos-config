@@ -87,12 +87,12 @@
         "hyprctl setcursor WhiteSur-cursors 24"
         "waycorner"
         "wl-clip-persist --clipboard regular"   #
-        "play --volume=0.4 .config/startup.mp3" #
+        "play --volume=0.45 .config/startup.mp3" #
       ];
 
       # Applications to run on every reload
       exec = [
-        "ags run ~/.config/ags/app.ts"          #
+        "desktop"
       ];
 
       gesture = [

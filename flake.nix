@@ -4,6 +4,12 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     
+    desktop = {
+      # url = "path:/home/selim/.config/ags";
+      url = "github:SlimmerCH/hyprland-widgets";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     whitesur-src = {
       url = "github:vinceliuice/WhiteSur-icon-theme";
       flake = false;
@@ -31,10 +37,6 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    ags = {
-      url = "github:aylur/ags";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {

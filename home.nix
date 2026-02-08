@@ -13,22 +13,9 @@
 
   home.packages = with pkgs; [
 
-    nemo
+    inputs.desktop.packages.${pkgs.system}.default
 
-    (inputs.ags.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
-    extraPackages = with inputs.ags.packages.${pkgs.stdenv.hostPlatform.system}; [
-      io
-      astal4
-      battery
-      network
-      hyprland
-      wireplumber
-      mpris
-      powerprofiles
-      bluetooth
-      tray
-    ];
-  })
+    nemo
 
     icon-library
 
@@ -64,6 +51,7 @@
     zenity
     imagemagick
     sox
+    direnv
 
     evolution-data-server
     evolution

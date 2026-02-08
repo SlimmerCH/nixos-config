@@ -25,6 +25,7 @@
       "inputs": {
         "astal": "astal",
         "nixpkgs": [
+          "desktop",
           "nixpkgs"
         ]
       },
@@ -78,6 +79,7 @@
     "astal": {
       "inputs": {
         "nixpkgs": [
+          "desktop",
           "ags",
           "nixpkgs"
         ]
@@ -93,6 +95,27 @@
       "original": {
         "owner": "aylur",
         "repo": "astal",
+        "type": "github"
+      }
+    },
+    "desktop": {
+      "inputs": {
+        "ags": "ags",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1770515879,
+        "narHash": "sha256-HFQV0TEPHPwnQ4jTUlj7uDrRdeGuP2Pe/nRiza4g0d8=",
+        "owner": "SlimmerCH",
+        "repo": "hyprland-widgets",
+        "rev": "88b328dd1e939e15a1e85c8b675a7e7cf88cb0d1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SlimmerCH",
+        "repo": "hyprland-widgets",
         "type": "github"
       }
     },
@@ -141,11 +164,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1770318660,
-        "narHash": "sha256-yFVde8QZK7Dc0Xa8eQDsmxLX4NJNfL1NKfctSyiQgMY=",
+        "lastModified": 1770491427,
+        "narHash": "sha256-8b+0vixdqGnIIcgsPhjdX7EGPdzcVQqYxF+ujjex654=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "471e6a065f9efed51488d7c51a9abbd387df91b8",
+        "rev": "cbd8a72e5fe6af19d40e2741dc440d9227836860",
         "type": "github"
       },
       "original": {
@@ -229,11 +252,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1770330959,
-        "narHash": "sha256-OPmJ6dBL615GGX7ENJXtJm4zeMv5uXDjmO8WB1MI5wM=",
+        "lastModified": 1770470830,
+        "narHash": "sha256-6Nh0HrMoM7wdCpByaBDMo2fvndlrCZke2VNp69gX0G0=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "562171ab668e7ee98a9d2bbb62a9477ad2b1e24e",
+        "rev": "f68ac7ef7589e1536d438f7fbfb3ad987538fe0f",
         "type": "github"
       },
       "original": {
@@ -561,7 +584,7 @@
     "root": {
       "inputs": {
         "Hyprspace": "Hyprspace",
-        "ags": "ags",
+        "desktop": "desktop",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
@@ -573,11 +596,11 @@
     "slimmer-icons": {
       "flake": false,
       "locked": {
-        "lastModified": 1770338270,
-        "narHash": "sha256-EF5I0R2WkwfXjUaUYfy4ayk6bwsgBO6ii/id6S1i5PA=",
+        "lastModified": 1770487060,
+        "narHash": "sha256-m5P1xykxAiQvzNlNGEOLeFHXf1YcFzPmqW9YSnP6S4M=",
         "owner": "SlimmerCH",
         "repo": "Slimmer-icon-theme",
-        "rev": "6f4214beda4cebe485722b480a54a18a08ae3423",
+        "rev": "691f783b909a56218f11ec579d8275cbdbc227f5",
         "type": "github"
       },
       "original": {
