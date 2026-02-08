@@ -265,12 +265,12 @@
       ];
 
       bindel = [
-        ",XF86AudioRaiseVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+ && ags request show volume"
-        ",XF86AudioLowerVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && ags request show volume"
-        ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && ags request show volume"
+        ",XF86AudioRaiseVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+ && desktop-ctl show volume"
+        ",XF86AudioLowerVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && desktop-ctl show volume"
+        ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && desktop-ctl show volume"
         ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-        ",XF86MonBrightnessUp, exec, brightnessctl -e4 -n10 set 4%+ && ags request show brightness"
-        ",XF86MonBrightnessDown, exec, brightnessctl -e4 -n10 set 4%- && ags request show brightness"
+        ",XF86MonBrightnessUp, exec, brightnessctl -e4 -n10 set 4%+ && desktop-ctl show brightness"
+        ",XF86MonBrightnessDown, exec, brightnessctl -e4 -n10 set 4%- && desktop-ctl show brightness"
       ];
 
       bindl = [
