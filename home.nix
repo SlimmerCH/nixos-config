@@ -84,6 +84,7 @@
       }))
     
     fastfetch
+    sox
 
     whitesur-cursors
     nwg-look
