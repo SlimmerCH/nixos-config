@@ -28,6 +28,59 @@
   boot.loader.efi.canTouchEfiVariables = true; 
 
   
+  services.xserver = {
+    enable = true;
+    xkb.layout = "ch";  # "ch" is the code for Switzerland
+    xkb.variant = "";   # Leave empty for default, or use "fr" for Swiss French
+    desktopManager.xterm.enable = false;
+  };
+  services.displayManager = {
+    enable = true;
+
+    sddm = {
+      enable = true;
+      theme = "where_is_my_sddm_theme"; # Theme defaults to the Qt6 variant
+      wayland.enable = true;
+      enableHidpi = true;
+
+      extraPackages = with pkgs; [
+        qt6.qt5compat
+        qt6.qtdeclarative
+        qt6.qtsvg
+      ];
+      
+    };
+  };
+
+    /*
+  boot.plymouth = {
+    enable = true;
+    theme = "loader_2";
+    themePackages = [
+      (pkgs.adi1090x-plymouth-themes.override {
+        selected_themes = [ "loader_2" ]; # <--- AND here (saves 500MB of space)
+      })
+    ];
+  };
+
+  # 1. Hides the "Stage 1" / "Stage 2" messages
+  boot.consoleLogLevel = 0;
+  boot.initrd.verbose = false;
+
+  # 2. The critical kernel parameters to hide text
+  boot.kernelParams = [
+    "quiet"
+    "splash"
+    "boot.shell_on_fail"
+    "loglevel=3"
+    "rd.systemd.show_status=false"
+    "rd.udev.log_level=3"
+    "udev.log_priority=3"
+  ];
+  */
+
+
+
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
@@ -116,6 +169,8 @@
     grim
     brightnessctl
     mission-center
+
+    where-is-my-sddm-theme
   ];
 
   security.polkit.enable = true;
