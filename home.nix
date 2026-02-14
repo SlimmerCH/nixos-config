@@ -9,31 +9,27 @@
 
   home.username = "selim";
   home.homeDirectory = "/home/selim";
-  home.stateVersion = "25.05";
+  home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
 
-    inputs.desktop.packages.${pkgs.system}.default
-
-    nemo
+    inputs.desktop.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     icon-library
 
     signal-desktop
-    vscode
-    spotify
     vesktop
     gimp
     onlyoffice-desktopeditors
     libreoffice-fresh
+    vscode    
 
-    (emacs-pgtk.pkgs.withPackages (epkgs: [ epkgs.doom-themes epkgs.treemacs ]))
+    #(emacs-pgtk.pkgs.withPackages (epkgs: [ epkgs.doom-themes epkgs.treemacs ]))
     localsend
     rofi
     pavucontrol
     swaynotificationcenter
     libnotify
-    hyprshell
 
     showtime
     decibels
@@ -44,24 +40,17 @@
     loupe
     foliate
     transmission_4-gtk
-    cider-2
     snapshot
+    evince
 
-    dconf
-    zenity
-    imagemagick
-    sox
-    direnv
-
-    evolution-data-server
-    evolution
-    glib
+    #glib
 
     (whitesur-gtk-theme.override {
       altVariants = [ "normal" ];
     })
 
 
+    
     (let
       base = pkgs.whitesur-icon-theme.override {
         alternativeIcons = true;
@@ -93,29 +82,25 @@
           fi
         '';
       }))
-
-    # sha256-5AWyuqREKpgBCXPplpkdrcInDTZfjVIm/JtTleOmaNY=
+    
+    fastfetch
 
     whitesur-cursors
     nwg-look
-    nwg-dock-hyprland
 
     python3
-    # julia
+    julia
 
     inkscape
     obsidian
-    evince
     steam
     protonvpn-gui
-    davinci-resolve
     
-    rubik
     jetbrains-mono
   ];
   
-  programs.starship.enable = true;
 
+  
   services.swaync = {
     enable = true;
     # Optional: customize settings
@@ -175,6 +160,7 @@
       }
     '';
   };
+    
 
   home.activation = {
     createDefaultHyprTheme = lib.hm.dag.entryAfter ["writeBoundary"] ''
@@ -190,6 +176,7 @@
     '';
   };
 
+  /*
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     Unit = {
       Description = "polkit-gnome-authentication-agent-1";
@@ -209,6 +196,7 @@
       WantedBy = [ "graphical-session.target" ];
     };
   };
+  */
   
   /*
   xdg.mimeApps = {
@@ -219,7 +207,11 @@
     };
   };
   */
-
+  
+  xdg.configFile."rofi" = {
+    source = inputs.rofi-theme;
+  };
+  
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
@@ -232,10 +224,18 @@
       };
     };
   };
-
+  
+  programs.bash = {
+    enable = true;
+  
+    # This appends your custom PS1 directly to the .bashrc file
+    initExtra = ''
+      PS1='❯ '
+    '';
+  };
+  
   xdg.enable = true;
   xdg.mime.enable = true;
-  targets.genericLinux.enable = true;
   
   xdg.userDirs = {
     enable = true;
@@ -282,6 +282,7 @@
       type = "Application";
       categories = [ "GTK" "Settings" "DesktopSettings" ];
     };
+    /*
     "io.missioncenter.MissionCenter" = {
       name = "Task Manager";
       icon = "utilities-system-monitor";
@@ -290,42 +291,14 @@
       exec = "missioncenter";
       categories = ["GTK" "System" "Monitor"];
     };
+    */
   };
 
-  programs.home-manager.enable = true;
 
   # Ensure Qt apps (Crystal Dock) follow the system/GTK theme & icons
   home.sessionVariables = {
     QT_QPA_PLATFORMTHEME = "qt6ct";
   };
-
-
-  home.file.".local/share/applications/brave-blgdilankhbcpipclgpdndahbehalgkh-Default.desktop" = {
-    # This forces Home Manager to overwrite the file Brave created
-    force = true; 
-    
-    text = ''
-      [Desktop Entry]
-      Name=Apple Music
-      Icon=music-app
-      Type=Application
-      Terminal=false
-      Exec=brave --profile-directory=Default --app-id=blgdilankhbcpipclgpdndahbehalgkh
-      Categories=Player;Music;Audio;
-      StartupWMClass=crx_blgdilankhbcpipclgpdndahbehalgkh
-    '';
-  };
-
-  home.file.".local/share/applications/rofi.desktop" = {
-    force = true; 
-    text = ''
-      [Desktop Entry]
-      Name=Rofi
-      NoDisplay=true
-      Hiddenr=true
-    '';
-  };
-
 
 
 }

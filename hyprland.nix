@@ -7,7 +7,7 @@
     package = null;
 
     plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprexpo
+      # inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprexpo
       # inputs.Hyprspace.packages.${pkgs.stdenv.hostPlatform.system}.Hyprspace
       # THIS FUCKING PLUGIN IN ASS CHEEKS - IT DOESNT WORK
     ];
@@ -24,7 +24,7 @@
 
       # Experimental HDR/OLED settings
       # These specific keys often require raw config because they are experimental
-      monitor = eDP-1, addreserved, 0, 0, 0, 0
+      # monitor = eDP-1, addreserved, 0, 0, 0, 0
       # debug:manual_crash = 0
     '';
 
@@ -36,7 +36,7 @@
       };
 
       env = [
-        "GDK_SCALE,2"
+        # "GDK_SCALE,2"
         "XCURSOR_SIZE,32"
         "HYPRCURSOR_SIZE,24"
         "ENABLE_HDR_WSI,1" #
@@ -87,7 +87,7 @@
         "hyprctl setcursor WhiteSur-cursors 24"
         "waycorner"
         "wl-clip-persist --clipboard regular"   #
-        "play --volume=0.45 .config/startup.mp3" #
+        "play --volume=0.45 .config/desktop/startup.mp3" #
       ];
 
       # Applications to run on every reload
