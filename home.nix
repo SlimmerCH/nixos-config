@@ -100,6 +100,13 @@
     jetbrains-mono
   ];
   
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;  # Enable if you have XWayland apps
+    name = "WhiteSur-cursors";  # Replace with your desired theme name
+    package = pkgs.bibata-cursors;   # Replace with the package for that theme
+    size = 24;
+  };
 
   
   services.swaync = {
