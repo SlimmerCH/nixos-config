@@ -6,8 +6,8 @@
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";    
 
     desktop = {
-      # url = "path:/home/selim/Documents/Coding/hyprland-widgets";
-      url = "github:SlimmerCH/hyprland-widgets";
+      url = "path:/home/selim/Documents/Coding/hyprland-widgets";
+      # url = "github:SlimmerCH/hyprland-widgets";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -68,10 +68,9 @@
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
             
-            # Pass inputs and hostname to home-manager
             home-manager.extraSpecialArgs = { 
               inherit inputs; 
-              hostName = "laptop"; 
+              hostName = "laptop";
             };
             
             home-manager.users.selim = import ./home.nix;
@@ -96,10 +95,9 @@
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
             
-            # Pass inputs and hostname to home-manager
             home-manager.extraSpecialArgs = { 
               inherit inputs; 
-              hostName = "desktop"; 
+              hostName = "desktop";
             };
             
             home-manager.users.selim = import ./home.nix;

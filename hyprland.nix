@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, osConfig, ... }:
 
 {
   wayland.windowManager.hyprland = {
@@ -20,7 +20,7 @@
       }
       
       # Monitor Configuration
-      monitor = eDP-1, 2880x1800@120, 0x0, 2, bitdepth, 10
+      monitor = ${osConfig.deviceConfig.monitor}
 
       # Experimental HDR/OLED settings
       # These specific keys often require raw config because they are experimental
@@ -36,7 +36,7 @@
       };
 
       env = [
-        # "GDK_SCALE,2"
+        "GDK_SCALE,2"
         "XCURSOR_SIZE,32"
         "HYPRCURSOR_SIZE,24"
         "ENABLE_HDR_WSI,1" #
