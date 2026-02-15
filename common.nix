@@ -172,10 +172,12 @@
     brave
     slurp
     grim
+    direnv
     brightnessctl
     mission-center
 
     where-is-my-sddm-theme
+
   ];
 
   services.xserver.excludePackages = [ pkgs.xterm ];

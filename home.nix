@@ -241,6 +241,13 @@
       PS1='❯ '
     '';
   };
+
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true; # Auto-adds the hook to .bashrc
+    enableZshIntegration = true;  # Auto-adds the hook to .zshrc
+    nix-direnv.enable = true;     # Much faster reloading
+  };
   
   xdg.enable = true;
   xdg.mime.enable = true;
