@@ -149,7 +149,13 @@
   services.upower.enable = true;
   services.power-profiles-daemon.enable = true;
   
-  programs.ssh.startAgent = true;
+  # SSH
+  # programs.ssh.startAgent = true;
+
+  # Required for GNOME Calendar
+  services.gnome.evolution-data-server.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+  programs.dconf.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.selim = {
