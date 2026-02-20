@@ -182,7 +182,7 @@
         mkdir -p "$(dirname "$themeFile")"
         
         # We write a safe default color so Hyprland doesn't crash
-        echo '$primaryColor = rgba(179,165,231,0.6)' > "$themeFile"
+        echo '$primaryColor = rgba(169,206,195,0.7)' > "$themeFile"
       fi
     '';
   };
