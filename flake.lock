@@ -106,15 +106,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1771078778,
-        "narHash": "sha256-GhJzY2lbwzEVCHcSwUpWQgb1qG5s3Mi5Vh/IzJh9BKo=",
-        "owner": "SlimmerCH",
+        "lastModified": 1771542717,
+        "narHash": "sha256-NBSxKwhiLq73WLWgWaCA1bweTx2valdDnou+WNagcgU=",
+        "owner": "selimbucher",
         "repo": "hyprland-widgets",
-        "rev": "c279dab5cdbe2d4a09fc9354300fbd4b364e7860",
+        "rev": "9bcceedde0e5b81751aa331c48308b1d3c255662",
         "type": "github"
       },
       "original": {
-        "owner": "SlimmerCH",
+        "owner": "selimbucher",
         "repo": "hyprland-widgets",
         "type": "github"
       }
@@ -164,11 +164,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771037579,
-        "narHash": "sha256-NX5XuhGcsmk0oEII2PEtMRgvh2KaAv3/WWQsOpxAgR4=",
+        "lastModified": 1771531206,
+        "narHash": "sha256-1R3Wx6KUkMb4x4E5UOhW9p6rqiexzSGGWxZqSHqW5n0=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "05e6dc0f6ed936f918cb6f0f21f1dad1e4c53150",
+        "rev": "91be7cce763fa4022c7cf025a71b0c366d1b6e77",
         "type": "github"
       },
       "original": {
@@ -545,11 +545,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1771008912,
-        "narHash": "sha256-gf2AmWVTs8lEq7z/3ZAsgnZDhWIckkb+ZnAo5RzSxJg=",
+        "lastModified": 1771369470,
+        "narHash": "sha256-0NBlEBKkN3lufyvFegY4TYv5mCNHbi5OmBDrzihbBMQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a82ccc39b39b621151d6732718e3e250109076fa",
+        "rev": "0182a361324364ae3f436a63005877674cf45efb",
         "type": "github"
       },
       "original": {
@@ -587,13 +587,13 @@
       "locked": {
         "lastModified": 1771026314,
         "narHash": "sha256-rp3A5lPGZNOE6r0GLb2B36RVYpqCm0/l8hhMrxS90dc=",
-        "owner": "SlimmerCH",
+        "owner": "selimbucher",
         "repo": "rofi-theme",
         "rev": "c8406ef76b9ad616107538d0a176d68b167615f2",
         "type": "github"
       },
       "original": {
-        "owner": "SlimmerCH",
+        "owner": "selimbucher",
         "repo": "rofi-theme",
         "type": "github"
       }
@@ -614,16 +614,16 @@
     "slimmer-icons": {
       "flake": false,
       "locked": {
-        "lastModified": 1771096965,
-        "narHash": "sha256-T0N7a/HGLeWVoAV3/0q8ZEi1rd3ALHtkK901WTLe0V8=",
-        "owner": "SlimmerCH",
-        "repo": "Slimmer-icon-theme",
-        "rev": "a279643bf5ee5133bdf13c96b746071a6865fa87",
+        "lastModified": 1771542184,
+        "narHash": "sha256-UMWPAtKv3ig6Y40b8GvxDwfc8Lx30rh1BmlzoZYAJqM=",
+        "owner": "selimbucher",
+        "repo": "WhiteSur-steam-icons",
+        "rev": "df0d50ba4601accb82c853f037897b17dc9bd648",
         "type": "github"
       },
       "original": {
-        "owner": "SlimmerCH",
-        "repo": "Slimmer-icon-theme",
+        "owner": "selimbucher",
+        "repo": "WhiteSur-steam-icons",
         "type": "github"
       }
     },

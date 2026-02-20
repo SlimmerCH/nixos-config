@@ -94,6 +94,7 @@
     python3
     julia
     ghc
+    duckdb
 
     inkscape
     obsidian
